@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="雰囲気や用途に合わせて日本語の名前をランダムに生成できる無料ツールです。">
+  <title>名前ジェネレーター</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <div class="logo">名前ジェネレーター</div>
+      <p>あなたの物語に、新しい名前を。</p>
+    </header>
+
+    <section class="generator">
+      <h1>名前を生成する</h1>
+
+      <div class="form-group">
+        <label for="style">名前の雰囲気</label>
+        <select id="style">
+          <option value="modern">現代風</option>
+          <option value="traditional">古風</option>
+          <option value="neutral">中性的</option>
+          <option value="fantasy">ファンタジー風</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="count">生成する人数</label>
+        <select id="count">
+          <option value="1">1人</option>
+          <option value="5" selected>5人</option>
+          <option value="10">10人</option>
+        </select>
+      </div>
+
+      <button id="generateButton" class="generate-button">
+        名前を生成する
+      </button>
+    </section>
+
+    <section class="results">
+      <div class="results-header">
+        <h2>生成された名前</h2>
+        <span id="resultCount">0人</span>
+      </div>
+
+      <ul id="nameList" class="name-list">
+        <li class="empty-message">ここに生成された名前が表示されます。</li>
+      </ul>
+
+      <div class="actions">
+        <button id="copyAllButton" class="secondary-button">
+          すべてコピー
+        </button>
+        <button id="csvButton" class="secondary-button">
+          CSVで保存
+        </button>
+      </div>
+    </section>
+
+    <footer>
+      <p>名前ジェネレーター</p>
+      <p>無料で利用できます。</p>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
